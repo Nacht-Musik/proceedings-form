@@ -1,25 +1,34 @@
-// 参加者追加 ('add-btn'をクリック)
-function AddMember() {
-  // ユーザー名(表示値)を取得
-  var user_name_obj = document.getElementById("user_name_sel");
-  var idx = user_name_obj.selectedIndex;
-  var txt = user_name_obj.options[idx].text;
-  console.log('氏名：' + txt);    //デバッグ確認用
+function init(){
+  // 参加者追加('add-btn'をクリック)
+  $('.add-btn').click(function(){
+    // 追加する人の氏名を取得
+    var name_obj = document.getElementById("name_sel");
+    var idx = name_obj.selectedIndex;      //選択されている氏名のidを取得
+    var name_txt = name_obj.options[idx].text;    
+    console.log('氏名：' + name_txt + '  idx:' + idx);    //値取得確認用 
 
-  // 役割(表示値)を取得
-  var user_role_obj = document.getElementById("user_role_sel");
-  var idx = user_role_obj.selectedIndex;
-  var txt = user_role_obj.options[idx].text;
-  console.log('役割：' + txt);    //デバッグ確認用
-  
+    // 追加する人の役割を取得
+    var user_role_obj = document.getElementById("role_sel");
+    var idx = user_role_obj.selectedIndex;
+    var user_role_txt = user_role_obj.options[idx].text;
+    console.log('役割：' + user_role_txt + '  idx:' + idx);    //値取得確認用
 
-  // var user_role = document.getElementById("user_role");
-  // console.log('役割：' + user_role.text);
-  // 参加者のクローンを作成する
-  // 参加者フォームをclassで指定 -> Clone作成 -> 参加者枠に追加？
+    var elm = $('.person')[0];
+    elm = $(elm).clone().removeClass('template');
+
+    
+    $(elm).appendTo('.participants');
+
+
+  });
+
+  // del-btn クリック
+  $('.del-btn').click(function(){
+    console.log('del-btn click');
+  });
 }
 
-// 参加者削除('del-btn'をクリック)
-function DelMember() {
-  console.log("del-btn click...");
-}
+$(function(){
+  init();
+});
+

@@ -10,7 +10,6 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
     </script>
-    <script src="index.js"></script>
   </head>
 
   <body id="page--proceedings">
@@ -23,7 +22,6 @@
           <ul class='menu'>
             <li class='label'>会議</li>
 
-            <!-- プルダウンメニュー -->
             <li>
               <!-- <select onChange="location.href=value;"> -->
               <select>
@@ -43,8 +41,6 @@
           </ul>
         </section>
 
-        <br>
-
         <section class="flexbox">
           <table class="participants">
             <tr>
@@ -55,62 +51,47 @@
               <th class=''>氏名</th>
               <th class=''>役割</th>
             </tr>
-            <tr class="participants">
+            
+            <tr class="">
               <th class=''><span></span></th>
               <td class=''>
-                <select id="user_name_sel">
-                  <option value='00'></option>
-                  <option value='01'>Aさん</option>
-                  <option value='02'>Bさん</option>
-                  <option value='03'>Cさん</option>
-                  <option value='04'>Dさん</option>
+                <select id="name_sel">
+                  <option></option>
+                  <option>Aさん</option>
+                  <option>Bさん</option>
+                  <option>Cさん</option>
+                  <option>Dさん</option>
                 </select>
               </td>
               <td class=''>
-                <select id="user_role_sel">
-                  <option value='00'></option>
-                  <option value='01'>発言者</option>
-                  <option value='02'>記録者</option>
-                  <option value='03'>参加者</option>
+                <select id="role_sel">
+                  <option></option>
+                  <option>発言者</option>
+                  <option>記録者</option>
+                  <option>参加者</option>
                 </select>
               </td>
               <th>
                 <!-- 追加ボタン -->
-                <button type="button" class="add-btn" onclick="AddMember();">＋</button>
+                <button type="button" class="add-btn">＋</button>
               </th>
             </tr>
 
-            <!-- ここに人を追加していく！(予定) -->
+            <!-- 追加ボタンで複製される要素 -->
+            <tr class="template person">
+              <th class=''><span></span></th>
+              <th class='person_name'>User Name</th>
+              <th class='person_role'>User Role</th>
+              <th><button type="button" class="del-btn">－</button></th>
+            </tr>
 
           </table>
         </section>
 
-        <!-- 追加ボタンで複製される要素 -->
-        <div class="hidden">
-          <tr class="peopel">
-            <th class='label'><span></span></th>
-            <th class='label'>
-              <select name='user_name'>
-                <option name='' value=''></option>
-              </select>
-            </th>
-            <td class='label'>
-              <select name="user_role">
-                <option value=''></option>
-              </select>
-            </td>
-            <th>
-              <!-- 削除ボタン -->
-              <button type="button" class="del-btn" onclick="DelMember();">－</button>
-            </th>
-          </tr>
-        </div>
-
       </div>
     </main>
-
-
+    
   </body>
-
+  <script src="index.js"></script>
 </html>
 
