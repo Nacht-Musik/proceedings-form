@@ -2,6 +2,11 @@ header {
   height: 100px;
 }
 
+footer {
+  height: 150px;
+  background-color: #aaa;
+}
+
 .containar {
   max-width: 960px;
   margin: 60px auto;
@@ -14,9 +19,67 @@ header {
   display: none;
 }
 
-footer {
-  height: 150px;
-  background-color: #aaa;
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.menu {
+  vertical-align: center;
+}
+.label {
+  width: 200px;
+  text-align: left;
+  /* デバック用境界線表示 */
+  /* border:solid 1px #aaa; */
+}
+
+ul {
+  margin-bottom: 20px;
+  vertical-align: center;
+}
+
+li {
+  float: left;
+  vertical-align: center;
+  height: 30px;
+  width: 200px;
+}
+
+th, td {
+  float: left;
+  vertical-align: center;
+  height: 30px;
+  width: 200px;
+}
+
+input {
+  height: 80%;
+  width: 100%;
+  text-align: left;
+}
+
+select {
+  height: 100%;
+  width: 100%;
+}
+
+
+.add-btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  background-color: #ddd;
+  color: green;
+  font-weight: 900;
+}
+.del-btn {
+  height: 30px;
+  width: 30px;
+  border-radius: 20px;
+  background-color: red;
+  color: white;
+  font-weight: 900;
 }
 
 

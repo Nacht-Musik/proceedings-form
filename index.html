@@ -10,29 +10,105 @@
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous">
     </script>
+    <script src="index.js"></script>
   </head>
 
   <body id="page--proceedings">
-    <!-- <header> -->
-      <!-- <div class="containar"> -->
-      <!-- </div> -->
-    <!-- </header> -->
 
     <main>
       <div class="containar">
-        <p class='label'>会議</p> 
-        <!-- プルダウンメニューにする -->
-        <ul>
-          <li><a href='#'>Option1</a></li>
-          <li><a href='#'>Option2</a></li>
-        </ul>
+
+        <!-- "会議" 行 -->
+        <section class="flexbox">
+          <ul class='menu'>
+            <li class='label'>会議</li>
+
+            <!-- プルダウンメニュー -->
+            <li>
+              <!-- <select onChange="location.href=value;"> -->
+              <select>
+                <option value='#'></option>
+                <option value='1'>Type: #1</option>
+                <option value='2'>Type: #2</option>
+              </select>
+            </li>
+          </ul>
+        </section>
+
+        <!-- 会議名 -->
+        <section class="flexbox">
+          <ul class="">
+            <li class='label'>会議名</li>
+            <li><input type="text"></li>
+          </ul>
+        </section>
+
+        <br>
+
+        <section class="flexbox">
+          <table class="participants">
+            <tr>
+              <th class='label'>参加者</th>
+            </tr>
+            <tr class="">
+              <th class=''><span></span></th>
+              <th class=''>氏名</th>
+              <th class=''>役割</th>
+            </tr>
+            <tr class="participants">
+              <th class=''><span></span></th>
+              <td class=''>
+                <select id="user_name_sel">
+                  <option value='00'></option>
+                  <option value='01'>Aさん</option>
+                  <option value='02'>Bさん</option>
+                  <option value='03'>Cさん</option>
+                  <option value='04'>Dさん</option>
+                </select>
+              </td>
+              <td class=''>
+                <select id="user_role_sel">
+                  <option value='00'></option>
+                  <option value='01'>発言者</option>
+                  <option value='02'>記録者</option>
+                  <option value='03'>参加者</option>
+                </select>
+              </td>
+              <th>
+                <!-- 追加ボタン -->
+                <button type="button" class="add-btn" onclick="AddMember();">＋</button>
+              </th>
+            </tr>
+
+            <!-- ここに人を追加していく！(予定) -->
+
+          </table>
+        </section>
+
+        <!-- 追加ボタンで複製される要素 -->
+        <div class="hidden">
+          <tr class="peopel">
+            <th class='label'><span></span></th>
+            <th class='label'>
+              <select name='user_name'>
+                <option name='' value=''></option>
+              </select>
+            </th>
+            <td class='label'>
+              <select name="user_role">
+                <option value=''></option>
+              </select>
+            </td>
+            <th>
+              <!-- 削除ボタン -->
+              <button type="button" class="del-btn" onclick="DelMember();">－</button>
+            </th>
+          </tr>
+        </div>
+
       </div>
     </main>
 
-    <!-- <footer> -->
-      <!-- <div class="containar"> -->
-      <!-- </div> -->
-    <!-- </footer> -->
 
   </body>
 
