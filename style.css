@@ -82,4 +82,7 @@ select {
   font-weight: 900;
 }
 
-
+.alert {
+  color: red;
+  width: 400px;
+}
