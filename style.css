@@ -7,33 +7,6 @@ footer {
   background-color: #aaa;
 }
 
-.containar {
-  max-width: 960px;
-  margin: 60px auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  clear: both;
-}
-
-.template {
-  display: none;
-}
-
-.flexbox {
-  display: -webkit-flex;
-  display: flex;
-}
-
-.menu {
-  vertical-align: center;
-}
-.label {
-  width: 200px;
-  text-align: left;
-  /* デバック用境界線表示 */
-  /* border:solid 1px #aaa; */
-}
-
 ul {
   margin-bottom: 20px;
   vertical-align: center;
@@ -65,6 +38,33 @@ select {
 }
 
 
+.containar {
+  max-width: 960px;
+  margin: 60px auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  clear: both;
+}
+
+.template {
+  display: none;
+}
+
+.flexbox {
+  display: -webkit-flex;
+  display: flex;
+}
+
+.menu {
+  vertical-align: center;
+}
+.label {
+  width: 200px;
+  text-align: left;
+  /* デバック用境界線表示 */
+  /* border:solid 1px #aaa; */
+}
+
 .add-btn {
   height: 30px;
   width: 30px;
@@ -82,7 +82,12 @@ select {
   font-weight: 900;
 }
 
-.alert {
+#alert-disp {
   color: red;
   width: 400px;
 }
+
+.hidden {
+  display: none;
+}
+

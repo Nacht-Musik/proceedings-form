@@ -17,78 +17,81 @@
     <main>
       <div class="containar">
 
-        <!-- "会議" 行 -->
+        <!-- 会議カテゴリー選択 -->
         <section class="flexbox">
           <ul class='menu'>
             <li class='label'>会議</li>
 
             <li>
               <!-- <select onChange="location.href=value;"> -->
-              <select>
-                <option value='#'></option>
-                <option value='1'>Type: #1</option>
-                <option value='2'>Type: #2</option>
+              <select id='meeting_category_sel'>
+                <option value='close'></option>
+                <option value='open'>会議カテゴリー: #1</option>
+                <!-- <option value='2'>Type: #2</option> -->
               </select>
             </li>
           </ul>
         </section>
 
-        <!-- 会議名 -->
-        <section class="flexbox">
-          <ul class="">
-            <li class='label'>会議名</li>
-            <li><input type="text"></li>
-          </ul>
+
+        <section id="meeting-form-1" class='hidden'>
+          <!-- 会議名 -->
+          <section class="flexbox">
+            <ul class="">
+              <li class='label'>会議名</li>
+              <li><input type="text"></li>
+            </ul>
+          </section>
+
+          <section class="flexbox">
+            <table class="participants">
+              <tr>
+                <th class='label'>参加者</th>
+                <th id='alert-disp'></th>
+              </tr>
+              <tr class="">
+                <th class=''><span></span></th>
+                <th class=''>氏名</th>
+                <th class=''>役割</th>
+              </tr>
+              
+              <tr class="">
+                <th class=''><span></span></th>
+                <th class=''>
+                  <select id="name_sel">
+                    <option></option>
+                    <option>Aさん</option>
+                    <option>Bさん</option>
+                    <option>Cさん</option>
+                    <option>Dさん</option>
+                  </select>
+                </th>
+                <th class=''>
+                  <select id="role_sel">
+                    <option></option>
+                    <option>発言者</option>
+                    <option>記録者</option>
+                    <option>参加者</option>
+                  </select>
+                </th>
+                <th>
+                  <!-- 追加ボタン -->
+                  <button type="button" class="add-btn">＋</button>
+                </th>
+              </tr>
+
+              <!-- 追加ボタンで複製される要素 -->
+              <tr class="template person">
+                <th class=''><span></span></th>
+                <th class='person_name'>User Name</th>
+                <th class='person_role'>User Role</th>
+                <th><button type="button" class="del-btn">－</button></th>
+              </tr>
+
+            </table>
+          </section>
+
         </section>
-
-        <section class="flexbox">
-          <table class="participants">
-            <tr>
-              <th class='label'>参加者</th>
-              <th class='alert'></th>
-            </tr>
-            <tr class="">
-              <th class=''><span></span></th>
-              <th class=''>氏名</th>
-              <th class=''>役割</th>
-            </tr>
-            
-            <tr class="">
-              <th class=''><span></span></th>
-              <th class=''>
-                <select id="name_sel">
-                  <option></option>
-                  <option>Aさん</option>
-                  <option>Bさん</option>
-                  <option>Cさん</option>
-                  <option>Dさん</option>
-                </select>
-              </th>
-              <th class=''>
-                <select id="role_sel">
-                  <option></option>
-                  <option>発言者</option>
-                  <option>記録者</option>
-                  <option>参加者</option>
-                </select>
-              </th>
-              <th>
-                <!-- 追加ボタン -->
-                <button type="button" class="add-btn">＋</button>
-              </th>
-            </tr>
-
-            <!-- 追加ボタンで複製される要素 -->
-            <tr class="template person">
-              <th class=''><span></span></th>
-              <th class='person_name'>User Name</th>
-              <th class='person_role'>User Role</th>
-              <th><button type="button" class="del-btn">－</button></th>
-            </tr>
-
-          </table>
-        </section>
-
       </div>
     </main>
     
