@@ -16,43 +16,41 @@
 
     <main>
       <div class="containar">
+        <br>
 
         <!-- 会議カテゴリー選択 -->
-        <section class="flexbox">
-          <ul class='menu'>
-            <li class='label'>会議</li>
-
+        <article class="flexbox category">
+          <ul class=''>
+            <li class='bold'>会議</li>
             <li>
-              <!-- <select onChange="location.href=value;"> -->
               <select id='meeting_category_sel'>
                 <option value='close'></option>
                 <option value='open'>会議カテゴリー: #1</option>
-                <!-- <option value='2'>Type: #2</option> -->
               </select>
             </li>
           </ul>
-        </section>
+        </article>
 
-
+        <!-- 会議カテゴリー本体1 -->
         <section id="meeting-form-1" class='hidden'>
           <!-- 会議名 -->
-          <section class="flexbox">
+          <article class="flexbox">
             <ul class="">
-              <li class='label'>会議名</li>
+              <li class='bold'>会議名</li>
               <li><input type="text"></li>
             </ul>
-          </section>
+          </article>
 
-          <section class="flexbox">
+          <article class="flexbox">
             <table class="participants">
               <tr>
-                <th class='label'>参加者</th>
+                <th class='bold'>参加者</th>
                 <th id='alert-disp'></th>
               </tr>
               <tr class="">
                 <th class=''><span></span></th>
-                <th class=''>氏名</th>
-                <th class=''>役割</th>
+                <th class='bold'>氏名</th>
+                <th class='bold'>役割</th>
               </tr>
               
               <tr class="">
@@ -74,7 +72,7 @@
                     <option>参加者</option>
                   </select>
                 </th>
-                <th>
+                <th class='btn-cell'>
                   <!-- 追加ボタン -->
                   <button type="button" class="add-btn">＋</button>
                 </th>
@@ -85,11 +83,13 @@
                 <th class=''><span></span></th>
                 <th class='person_name'>User Name</th>
                 <th class='person_role'>User Role</th>
-                <th><button type="button" class="del-btn">－</button></th>
+                <th class="btn-cell">
+                  <button type="button" class="del-btn">－</button>
+                </th>
               </tr>
 
             </table>
-          </section>
+          </article>
 
         </section>
       </div>

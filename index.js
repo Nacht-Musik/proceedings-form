@@ -22,6 +22,7 @@ function init(){
     // 追加する人の役割を取得
     var role = $('#role_sel option:selected').text();
 
+    // 追加するHTML要素を取得(clone)し、非表示(template)クラスを削除
     var elm = $('.person')[0];
     elm = $(elm).clone().removeClass('template');
 
