@@ -16,14 +16,12 @@
 
     <main>
       <div class="containar">
-        <br>
-
         <!-- 会議カテゴリー選択 -->
-        <article class="flexbox category">
+        <article class="flexbox category-sel">
           <ul class=''>
-            <li class='bold'>会議</li>
+            <li class='subject-label'>会議</li>
             <li>
-              <select id='meeting_category_sel'>
+              <select id='meeting-category-sel'>
                 <option value='close'></option>
                 <option value='open'>会議カテゴリー: #1</option>
               </select>
@@ -36,27 +34,28 @@
           <!-- 会議名 -->
           <article class="flexbox">
             <ul class="">
-              <li class='bold'>会議名</li>
+              <li class='subject-label'>会議名</li>
               <li><input type="text"></li>
             </ul>
           </article>
+          <br>
 
           <article class="flexbox">
             <table class="participants">
               <tr>
-                <th class='bold'>参加者</th>
+                <th class='subject-label'>参加者</th>
                 <th id='alert-disp'></th>
               </tr>
               <tr class="">
                 <th class=''><span></span></th>
-                <th class='bold'>氏名</th>
-                <th class='bold'>役割</th>
+                <th class='subject-label'>氏名</th>
+                <th class='subject-label'>役割</th>
               </tr>
               
-              <tr class="">
+              <tr class="add-person">
                 <th class=''><span></span></th>
                 <th class=''>
-                  <select id="name_sel">
+                  <select id="name-sel">
                     <option></option>
                     <option>Aさん</option>
                     <option>Bさん</option>
@@ -65,7 +64,7 @@
                   </select>
                 </th>
                 <th class=''>
-                  <select id="role_sel">
+                  <select id="role-sel">
                     <option></option>
                     <option>発言者</option>
                     <option>記録者</option>
@@ -81,8 +80,8 @@
               <!-- 追加ボタンで複製される要素 -->
               <tr class="template person">
                 <th class=''><span></span></th>
-                <th class='person_name'>User Name</th>
-                <th class='person_role'>User Role</th>
+                <th class='person-name'>User Name</th>
+                <th class='person-role'>User Role</th>
                 <th class="btn-cell">
                   <button type="button" class="del-btn">－</button>
                 </th>
